@@ -477,33 +477,33 @@ entry(
 # )
 # This reaction should be pressure dependent. 
 
+entry(
+    index=47,
+    label="O + OH <=> HO2",
+    kinetics=ThirdBody(
+        arrheniusLow=Arrhenius(A=(1e+15, 'cm^6/(mol^2*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K'))),
+    shortDesc=u"""[Konnov2015]""",
+    longDesc=u"""Table 2, Reaction X13""",
+)
+
+
+
 # entry(
-#     index=47,
-#     label="O + OH <=> HO2",
+#     index=48,
+#     label="HO2 + H <=> H2O2",
 #     kinetics=ThirdBody(
-#         arrheniusLow=Arrhenius(A=(1e+15, 'cm^6/(mol^2*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K'))),
-#     shortDesc=u"""[Konnov2015]""",
-#     longDesc=u"""Table 2, Reaction X13""",
+#         arrheniusLow=Arrhenius(A=(6.0E+14, 'cm^6/(mol^2*s)'), n=1.25, Ea=(-270, 'cal/mol'), T0=(1, 'K'))),
+#     shortDesc=u"""[Hosein2007]""",
+#     longDesc = u"""
+# Reaction X2 in Burke at el. (Table III),
+# p. 1909 in Hosein2007
+# Declared 'negligible' by Burke at el.
+# The original rate Arrhenius(A=(7.20E+09, 'cm^6/(mol^2*s)'), n=1.25, Ea=(-270, 'cal/mol'), T0 = (1, 'K')) was
+# multiplied by the inverse of ~1.2E-05 mol cm^-3 which is the density of an ideal gas at 1000 K,
+# so that a ThirdBody kinetics format could be written here
+# """,
 # )
 #The H + HO2 reaction will directly well-skip to OH + OH or O + H2O. 
-
-
-
-entry(
-    index=48,
-    label="HO2 + H <=> H2O2",
-    kinetics=ThirdBody(
-        arrheniusLow=Arrhenius(A=(6.0E+14, 'cm^6/(mol^2*s)'), n=1.25, Ea=(-270, 'cal/mol'), T0=(1, 'K'))),
-    shortDesc=u"""[Hosein2007]""",
-    longDesc = u"""
-Reaction X2 in Burke at el. (Table III),
-p. 1909 in Hosein2007
-Declared 'negligible' by Burke at el.
-The original rate Arrhenius(A=(7.20E+09, 'cm^6/(mol^2*s)'), n=1.25, Ea=(-270, 'cal/mol'), T0 = (1, 'K')) was
-multiplied by the inverse of ~1.2E-05 mol cm^-3 which is the density of an ideal gas at 1000 K,
-so that a ThirdBody kinetics format could be written here
-""",
-)
 
 entry(
     index=49,
