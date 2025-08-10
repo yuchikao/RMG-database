@@ -1856,22 +1856,24 @@ Measured in Ar
 """,
 )
 
-entry(
-    index=91,
-    label="NH + N <=> N + N + H",
-    degeneracy=1,
-    kinetics=Arrhenius(A=(7.75e+14, 'cm^3/(mol*s)'), n=-0.20, Ea=(54159, 'cal/mol'), T0=(1, 'K')),
-    shortDesc=u"""[Varandas2005]""",
-    longDesc=
-u"""
-Part of the "NNH Pathway"
-reaction 1 in [Varandas2005]
-Fits to a total of 972 MRCI energies (based on the aug-cc-pVQZ basis set of Dunning27), scaled by the DMBE-SEC
-method to account for excitations higher than singles and doubles and the incompleteness of the one-electron basis set.
-The fragmentation channel (N + NH <=> N + N + H) opens up at ~3000 K, and even at very high T (25000 K) its rate is
-an order of magnitude lower than N + NH <=> N2 + H. Although probably insignificant, it is brought here for completeness.
-""",
-)
+# entry(
+#     index=91,
+#     label="NH + N <=> N + N + H",
+#     degeneracy=1,
+#     kinetics=Arrhenius(A=(7.75e+14, 'cm^3/(mol*s)'), n=-0.20, Ea=(54159, 'cal/mol'), T0=(1, 'K')),
+#     shortDesc=u"""[Varandas2005]""",
+#     longDesc=
+# u"""
+# Part of the "NNH Pathway"
+# reaction 1 in [Varandas2005]
+# Fits to a total of 972 MRCI energies (based on the aug-cc-pVQZ basis set of Dunning27), scaled by the DMBE-SEC
+# method to account for excitations higher than singles and doubles and the incompleteness of the one-electron basis set.
+# The fragmentation channel (N + NH <=> N + N + H) opens up at ~3000 K, and even at very high T (25000 K) its rate is
+# an order of magnitude lower than N + NH <=> N2 + H. Although probably insignificant, it is brought here for completeness.
+# """,
+# )
+#Our model already has the NH --> N + H and N2 --> N + N reactions, and these channels should already capture the effect of forming the "triple products" N + N + H.
+
 
 entry(
     index = 92,

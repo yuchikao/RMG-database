@@ -467,23 +467,27 @@ entry(
     longDesc=u"""Table 2, Reaction X2""",
 )
 
-entry(
-    index=46,
-    label="H2 + O2 + O2 => HO2 + HO2",
-    reversible = False,
-    kinetics=Arrhenius(A=(2e+17, 'cm^6/(mol^2*s)'), n=0, Ea=(25830, 'cal/mol'), T0=(1, 'K')),
-    shortDesc=u"""[Konnov2015]""",
-    longDesc=u"""Table 2, Reaction X3""",
-)
+# entry(
+#     index=46,
+#     label="H2 + O2 + O2 => HO2 + HO2",
+#     reversible = False,
+#     kinetics=Arrhenius(A=(2e+17, 'cm^6/(mol^2*s)'), n=0, Ea=(25830, 'cal/mol'), T0=(1, 'K')),
+#     shortDesc=u"""[Konnov2015]""",
+#     longDesc=u"""Table 2, Reaction X3""",
+# )
+# This reaction should be pressure dependent. 
 
-entry(
-    index=47,
-    label="O + OH <=> HO2",
-    kinetics=ThirdBody(
-        arrheniusLow=Arrhenius(A=(1e+15, 'cm^6/(mol^2*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K'))),
-    shortDesc=u"""[Konnov2015]""",
-    longDesc=u"""Table 2, Reaction X13""",
-)
+# entry(
+#     index=47,
+#     label="O + OH <=> HO2",
+#     kinetics=ThirdBody(
+#         arrheniusLow=Arrhenius(A=(1e+15, 'cm^6/(mol^2*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K'))),
+#     shortDesc=u"""[Konnov2015]""",
+#     longDesc=u"""Table 2, Reaction X13""",
+# )
+#The H + HO2 reaction will directly well-skip to OH + OH or O + H2O. 
+
+
 
 entry(
     index=48,
