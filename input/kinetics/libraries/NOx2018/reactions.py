@@ -11381,11 +11381,12 @@ entry(
 
 entry(
     index = 744,
-    label = "H2NN(S) + OH => NH2 + NO + H",
+    label = "H2NN(S) + OH => NH2NO + H",
     degeneracy = 1,
     reversible = False,
     kinetics = Arrhenius(A=(2e+12, 'cm^3/(mol*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K')),
 )
+#change from NH2 + NO to NH2NO 
 
 entry(
     index = 745,
