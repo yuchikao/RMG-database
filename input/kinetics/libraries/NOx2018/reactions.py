@@ -11389,7 +11389,7 @@ entry(
 
 entry(
     index = 745,
-    label = "H2NN(S) + HO2 => NH2 + NO + OH",
+    label = "H2NN(S) + HO2 => NH2NO + OH",
     degeneracy = 1,
     reversible = False,
     kinetics = Arrhenius(A=(9e+12, 'cm^3/(mol*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K')),
