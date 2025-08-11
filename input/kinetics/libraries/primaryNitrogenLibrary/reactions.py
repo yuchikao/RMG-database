@@ -7188,7 +7188,7 @@ CCSD(T)/6-311+G(3df.2p)//CCSD/6-311++G(d,p)
 entry(
     index=424,
     label='NH2 + HNO <=> NH2NO + H',
-    duplicate=True,
+    #duplicate=True,
     kinetics=PDepArrhenius(
         pressures=([1, 10, 100, 760, 7600, 76000], 'torr'),
         arrhenius=[
