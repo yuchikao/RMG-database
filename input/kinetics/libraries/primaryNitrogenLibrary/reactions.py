@@ -7169,12 +7169,12 @@ entry(
     kinetics=PDepArrhenius(
         pressures=([1, 10, 100, 760, 7600, 76000], 'torr'),
         arrhenius=[
-            Arrhenius(A=(2.18e-18, 'cm^3/(mol*s)'), n=8.17, Ea=(9064, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(7.71e-17, 'cm^3/(mol*s)'), n=7.79, Ea=(6576, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(2.14e-12, 'cm^3/(mol*s)'), n=6.56, Ea=(3279, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(7.83e-08, 'cm^3/(mol*s)'), n=5.29, Ea=(469, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(5.70e-05, 'cm^3/(mol*s)'), n=4.49, Ea=(-1157, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(1.31e-03, 'cm^3/(mol*s)'), n=4.11, Ea=(-1938, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.18e-18, 'cm^3/(mol*s)'), n=8.17, Ea=(-9064, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(7.71e-17, 'cm^3/(mol*s)'), n=7.79, Ea=(-6576, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.14e-12, 'cm^3/(mol*s)'), n=6.56, Ea=(-3279, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(7.83e-08, 'cm^3/(mol*s)'), n=5.29, Ea=(-469, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(5.70e-05, 'cm^3/(mol*s)'), n=4.49, Ea=(1157, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(1.31e-03, 'cm^3/(mol*s)'), n=4.11, Ea=(1938, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
         ],
     ),
     shortDesc=u"""[Lin2009c]""",
@@ -7182,6 +7182,7 @@ entry(
 u"""
 k3, Table II
 CCSD(T)/6-311+G(3df.2p)//CCSD/6-311++G(d,p)
+B value is "-Ea/R"
 """,
 )
 
@@ -7206,6 +7207,7 @@ entry(
 u"""
 k5, Table II
 CCSD(T)/6-311+G(3df.2p)//CCSD/6-311++G(d,p)
+B value is "-Ea/R"
 """,
 )
 
