@@ -46,6 +46,7 @@ Reference legend:
 [Bozzelli1994] J.W. Bozzelli, A.Y. Chang, A.M. Dean, Symp. (Int.) Comb., 1994, 25(1), 965-974, doi: 10.1016/S0082-0784(06)80733-2
 [Bozzelli1996] P. Glarborg, D. Kubel, K. Dam-Johansen, H-M. Chiang, J.W. Bozzelli, Int. J. Chem. Kin., 1996, 28(10), 773-790, doi: 10.1002/(SICI)1097-4601(1996)28:10<773::AID-KIN8>3.0.CO;2-K
 [Bozzelli2010] R. Asatryan, J.W. Bozzelli, G. da Silva, S. Swinnen, M.T. Nguyen, J. Phys. Chem. A 2010, 114, 6235-6249, doi: 10.1021/jp101640p 
+[Burke2024]  LJoe Lee, Mark C. Barbet, Carly E. LaGrotta, Qinghui Meng, Lei Lei, Francis M. Haas, Michael P. Burke, Combustion and Flame, 267, 2024, doi:10.1016/j.combustflame.2024.113563
 [Carl2002] S.A. Carl, Q. Sun, L. Vereecken, J. Peeters, J. Phys. Chem. A 2002, 106(51), 12242-12247, doi: 10.1021/jp014135i
 [Cavallotti2023] A. Stagni, C. Cavallotti, Proc. Comb. Inst. 2023, 39(1), 633-641, doi: 10.1016/j.proci.2022.08.024
 [Cohen1991] N. Cohen, K. R. Westberg, Journal of Physical and Chemical Reference Data, 1991, 20, 1211, doi: 10.1063/1.555901
@@ -1460,14 +1461,15 @@ entry(
     index=68,
     label="N2O + O <=> N2 + O2",
     degeneracy=1,
-    kinetics=Arrhenius(A=(1.66e+12, 'cm^3/(mol*s)'), n=0, Ea=(11650, 'cal/mol'),
-                       T0=(1, 'K'), Tmin=(988, 'K'), Tmax=(3340, 'K')),
-    shortDesc=u"""[Lin2020]""",
+    kinetics=Arrhenius(A=(2.077e+14, 'cm^3/(mol*s)'), n=0, Ea=(40740, 'cal/mol'), T0=(1, 'K'),
+    shortDesc=u"""[Burke2024]""",
     longDesc=
 u"""
+original ref: [Lin2020]
+    kinetics=Arrhenius(A=(1.66e+12, 'cm^3/(mol*s)'), n=0, Ea=(11650, 'cal/mol'),
+                       T0=(1, 'K'), Tmin=(988, 'K'), Tmax=(3340, 'K')),
 Part of the "N2O Pathway"
 k3
-
 Also available from D&B, originally taken from:
 Davidson, D.E, DiRosa, M.D., Chang, A.Y., & Hanson, R.K. (1991). 18th International Symposium on Shock Waves, Sendai, p. 813
 As reported by Dean & Bozzelli, see 2.5.4 on p. 145
@@ -1478,10 +1480,13 @@ entry(
     index = 69,
     label = "N2O + O <=> NO + NO",
     degeneracy = 1,
-    kinetics = Arrhenius(A=(2.9e+13, 'cm^3/(mol*s)'), n=0, Ea=(23151, 'cal/mol'), T0=(1, 'K')),
-    shortDesc = u"""[DeanBozz2000]""",
+    kinetics = Arrhenius(A=(5.089e+13, 'cm^3/(mol*s)'), n=0, Ea=(26800, 'cal/mol'), T0=(1, 'K')),
+    shortDesc = u"""[Burke2024]""",
     longDesc =
 u"""
+original 
+[DeanBozz2000]
+Arrhenius(A=(2.9e+13, 'cm^3/(mol*s)'), n=0, Ea=(23151, 'cal/mol'), T0=(1, 'K')),
 Part of the "N2O Pathway"
 Rate taken from:
 Davidson, D.E, DiRosa, M.D., Chang, A.Y., & Hanson, R.K. (1991). 18th International Symposium on Shock Waves, Sendai, p. 813
@@ -7193,12 +7198,12 @@ entry(
     kinetics=PDepArrhenius(
         pressures=([1, 10, 100, 760, 7600, 76000], 'torr'),
         arrhenius=[
-            Arrhenius(A=(2.39e+03, 'cm^3/(mol*s)'), n=2.70, Ea=(256, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(7.29e+03, 'cm^3/(mol*s)'), n=2.56, Ea=(18, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(4.07e+04, 'cm^3/(mol*s)'), n=2.36, Ea=(-354, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(2.43e+05, 'cm^3/(mol*s)'), n=2.15, Ea=(-759, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(1.21e+06, 'cm^3/(mol*s)'), n=1.97, Ea=(-1166, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(1.95e+06, 'cm^3/(mol*s)'), n=1.92, Ea=(-1312, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.39e+03, 'cm^3/(mol*s)'), n=2.70, Ea=(-256, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(7.29e+03, 'cm^3/(mol*s)'), n=2.56, Ea=(-18, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(4.07e+04, 'cm^3/(mol*s)'), n=2.36, Ea=(354, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.43e+05, 'cm^3/(mol*s)'), n=2.15, Ea=(759, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(1.21e+06, 'cm^3/(mol*s)'), n=1.97, Ea=(1166, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(1.95e+06, 'cm^3/(mol*s)'), n=1.92, Ea=(1312, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
         ],
     ),
     elementary_high_p = False,
