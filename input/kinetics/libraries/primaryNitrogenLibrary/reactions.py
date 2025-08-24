@@ -46,6 +46,7 @@ Reference legend:
 [Bozzelli1994] J.W. Bozzelli, A.Y. Chang, A.M. Dean, Symp. (Int.) Comb., 1994, 25(1), 965-974, doi: 10.1016/S0082-0784(06)80733-2
 [Bozzelli1996] P. Glarborg, D. Kubel, K. Dam-Johansen, H-M. Chiang, J.W. Bozzelli, Int. J. Chem. Kin., 1996, 28(10), 773-790, doi: 10.1002/(SICI)1097-4601(1996)28:10<773::AID-KIN8>3.0.CO;2-K
 [Bozzelli2010] R. Asatryan, J.W. Bozzelli, G. da Silva, S. Swinnen, M.T. Nguyen, J. Phys. Chem. A 2010, 114, 6235-6249, doi: 10.1021/jp101640p 
+[Burke2023] Qinghui Meng, Lei Lei, Joe Lee, Michael P. Burke, Proceedings of the Combustion Institute, 39 (2023) 551–560, doi: 10.1016/j.proci.2022.08.044
 [Burke2024]  LJoe Lee, Mark C. Barbet, Carly E. LaGrotta, Qinghui Meng, Lei Lei, Francis M. Haas, Michael P. Burke, Combustion and Flame, 267, 2024, doi:10.1016/j.combustflame.2024.113563
 [Carl2002] S.A. Carl, Q. Sun, L. Vereecken, J. Peeters, J. Phys. Chem. A 2002, 106(51), 12242-12247, doi: 10.1021/jp014135i
 [Cavallotti2023] A. Stagni, C. Cavallotti, Proc. Comb. Inst. 2023, 39(1), 633-641, doi: 10.1016/j.proci.2022.08.024
@@ -1461,7 +1462,7 @@ entry(
     index=68,
     label="N2O + O <=> N2 + O2",
     degeneracy=1,
-    kinetics=Arrhenius(A=(2.077e+14, 'cm^3/(mol*s)'), n=0, Ea=(40740, 'cal/mol'), T0=(1, 'K'),
+    kinetics=Arrhenius(A=(2.077e+14, 'cm^3/(mol*s)'), n=0, Ea=(40740, 'cal/mol'), T0=(1, 'K')),
     shortDesc=u"""[Burke2024]""",
     longDesc=
 u"""
@@ -1484,8 +1485,7 @@ entry(
     shortDesc = u"""[Burke2024]""",
     longDesc =
 u"""
-original 
-[DeanBozz2000]
+original [DeanBozz2000]
 Arrhenius(A=(2.9e+13, 'cm^3/(mol*s)'), n=0, Ea=(23151, 'cal/mol'), T0=(1, 'K')),
 Part of the "N2O Pathway"
 Rate taken from:
@@ -3941,22 +3941,24 @@ CCSD(T)/cc-pVTZ and cc-pVQZ // M062X/6-311++G(d,p)
 entry(
     index=205,
     label="NH + O2 <=> NO + OH",
-    kinetics=Arrhenius(A=(1.28e+06, 'cm^3/(mol*s)'), n=1.5, Ea=(100, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3300, 'K')),
-    shortDesc=u"""[Miller1992]""",
+    kinetics=Arrhenius(A=(2.4e+13, 'cm^3/(mol*s)'), n=0, Ea=(13850, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3300, 'K')),
+    shortDesc=u"""[Glarborg2018]""",
     longDesc=
 u"""
-Part of the "NOx" subset
-k4
-BAC-MP4
-
-Also available from R. Talipov et al., J. Phys. Chem. A 2009, 113(23), 6468-6476, doi: 10.1021/jp902527a
-which suggests a significantly lower rate (see rate coefficient on NIST kinetics)
-Experimental data (though old) agree with the [Miller1992] rate.
-
-NOx2018 suggest a different rate, similar to ours but lower above 1100 K, we can consider shifting to that:
+!NOx2018 suggest a different rate, similar to ours but lower above 1100 K, we can consider shifting to that:
 NH+O2=HNO+O                          2.4E13   0.000   13850
 ! Baulch DL Bowman CT Cobos CJ Cox RA Just Th Kerr JA Pilling MJ Stocker D Troe J Tsang W Walker RW Warnatz J JPCRD 34:757-1397 2005
 ! Final value used in P. Glarborg, J.A. Miller, B. Ruscic, S.J. Klippenstein, Prog. Energy Combust. Sci. 67 (2018) 31-68 
+//
+!originally using     
+    kinetics=Arrhenius(A=(1.28e+06, 'cm^3/(mol*s)'), n=1.5, Ea=(100, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3300, 'K')),
+    shortDesc=u"""[Miller1992]""",
+Part of the "NOx" subset
+k4
+BAC-MP4
+Also available from R. Talipov et al., J. Phys. Chem. A 2009, 113(23), 6468-6476, doi: 10.1021/jp902527a
+which suggests a significantly lower rate (see rate coefficient on NIST kinetics)
+Experimental data (though old) agree with the [Miller1992] rate.
 """,
 )
 
@@ -4909,19 +4911,23 @@ important branching reactions.
 entry(
     index=266,
     label='NH2 + HO2 <=> NH3 + O2',
-    kinetics=Arrhenius(A=(2.179e+06, 'cm^3/(mol*s)'), n=2.080, Ea=(-4760, 'cal/mol'),
-                       T0=(1, 'K'), Tmin=(500, 'K'), Tmax=(1700, 'K')),
-    shortDesc=u"""[Sarathy2022]""",
+    kinetics=MultiArrhenius(
+    arrhenius=[Arrhenius(A=(6.04e+18, 'cm^3/(mol*s)'), n=-1.91, Ea=(306, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+               Arrhenius(A=(5.91e+07, 'cm^3/(mol*s)'), n=1.59, Ea=(-1373, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K'))]),
+    shortDesc=u"""[Klippenstein2022]""",
     longDesc=
 u"""
-W3X-L
-
-Also available from [Klippenstein2022]:
 kinetics=MultiArrhenius(
 arrhenius=[Arrhenius(A=(6.04e+18, 'cm^3/(mol*s)'), n=-1.91, Ea=(306, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
            Arrhenius(A=(5.91e+07, 'cm^3/(mol*s)'), n=1.59, Ea=(-1373, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K'))]),
 R1a
 CASPT2/CBS//CASPT2/cc-pVTZ-F12
+.
+!originally 
+[Sarathy2022]
+    kinetics=Arrhenius(A=(2.179e+06, 'cm^3/(mol*s)'), n=2.080, Ea=(-4760, 'cal/mol'),
+                       T0=(1, 'K'), Tmin=(500, 'K'), Tmax=(1700, 'K')),
+W3X-L
 """,
 )
 
@@ -7753,3 +7759,36 @@ entry(
 )
 
 
+entry(
+    index = 447,
+    label = "N2O + H <=> HNNO",
+    degeneracy = 1,
+    duplicate=True,
+    kinetics=Troe(
+        arrheniusHigh=Arrhenius(A=(1.70e+04, 'cm^3/(mol*s)'), n=3.05, Ea=(6530, 'cal/mol')),
+        arrheniusLow=Arrhenius(A=(1.27e+27, 'cm^6/(mol^2*s)'), n=-3.48, Ea=(7030, 'cal/mol')),
+        alpha=0.12, T3=(1e-30, 'K'), T1=(1e-30, 'K'), 
+        efficiencies={'[H][H]': 3.0, 'O': 21.0, '[O][O]': 1.1, 'N#N': 1.5},
+    shortDesc = u"""[Burke2023]""",
+    longDesc =
+u"""
+trans HNNO
+"""
+)
+
+entry(
+    index = 448,
+    label = "N2O + H <=> HNNO",
+    degeneracy = 1,
+    duplicate=True,
+    kinetics=Troe(
+        arrheniusHigh=Arrhenius(A=(2.37e-02, 'cm^3/(mol*s)'), n=4.81, Ea=(4790, 'cal/mol')),
+        arrheniusLow=Arrhenius(A=(1.23e+25, 'cm^6/(mol^2*s)'), n=-2.94, Ea=(6770, 'cal/mol')),
+        alpha=0.10, T3=(1e-30, 'K'), T1=(1e-30, 'K'), # T3 and T1 are defaults
+        efficiencies={'[H][H]': 3.0, 'O': 21.0, '[O][O]': 1.1, 'N#N': 1.5},
+    shortDesc = u"""[Burke2023]""",
+    longDesc =
+u"""
+cis HNNO
+"""
+)
