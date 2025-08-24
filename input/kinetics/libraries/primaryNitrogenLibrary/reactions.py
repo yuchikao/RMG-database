@@ -3950,9 +3950,8 @@ NH+O2=HNO+O                          2.4E13   0.000   13850
 ! Baulch DL Bowman CT Cobos CJ Cox RA Just Th Kerr JA Pilling MJ Stocker D Troe J Tsang W Walker RW Warnatz J JPCRD 34:757-1397 2005
 ! Final value used in P. Glarborg, J.A. Miller, B. Ruscic, S.J. Klippenstein, Prog. Energy Combust. Sci. 67 (2018) 31-68 
 //
-!originally using     
+!originally using [Miller1992]     
     kinetics=Arrhenius(A=(1.28e+06, 'cm^3/(mol*s)'), n=1.5, Ea=(100, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3300, 'K')),
-    shortDesc=u"""[Miller1992]""",
 Part of the "NOx" subset
 k4
 BAC-MP4
