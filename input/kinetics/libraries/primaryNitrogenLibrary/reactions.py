@@ -3945,19 +3945,17 @@ entry(
     shortDesc=u"""[Glarborg2018]""",
     longDesc=
 u"""
-!NOx2018 suggest a different rate, similar to ours but lower above 1100 K, we can consider shifting to that:
-NH+O2=HNO+O                          2.4E13   0.000   13850
-! Baulch DL Bowman CT Cobos CJ Cox RA Just Th Kerr JA Pilling MJ Stocker D Troe J Tsang W Walker RW Warnatz J JPCRD 34:757-1397 2005
-! Final value used in P. Glarborg, J.A. Miller, B. Ruscic, S.J. Klippenstein, Prog. Energy Combust. Sci. 67 (2018) 31-68 
-//
-!originally using [Miller1992]     
-    kinetics=Arrhenius(A=(1.28e+06, 'cm^3/(mol*s)'), n=1.5, Ea=(100, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3300, 'K')),
-Part of the "NOx" subset
-k4
+The rate is the final value from P. Glarborg, J.A. Miller, et al., Prog. Energy Combust. Sci. 67 (2018) 31-68.
+It originates from Baulch DL et al., JPCRD 34:757-1397 (2005).
+Baulch DL Bowman CT Cobos CJ Cox RA Just Th Kerr JA Pilling MJ Stocker D Troe J Tsang W Walker RW Warnatz J JPCRD 34:757-1397 2005
+Final value used in P. Glarborg, J.A. Miller, B. Ruscic, S.J. Klippenstein, Prog. Energy Combust. Sci. 67 (2018) 31-68 
+
+originally using [Miller1992]     
+kinetics=Arrhenius(A=(1.28e+06, 'cm^3/(mol*s)'), n=1.5, Ea=(100, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3300, 'K'),
+Part of the "NOx" subset,k4
 BAC-MP4
 Also available from R. Talipov et al., J. Phys. Chem. A 2009, 113(23), 6468-6476, doi: 10.1021/jp902527a
 which suggests a significantly lower rate (see rate coefficient on NIST kinetics)
-Experimental data (though old) agree with the [Miller1992] rate.
 """,
 )
 
