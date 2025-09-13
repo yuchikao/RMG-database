@@ -7844,16 +7844,4 @@ cis HNNO
 """
 )
 
-entry(
-    index = 449,
-    label = "H + N2O <=> HNNO",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(1.9e+03, 'cm^3/(mol*s)'), n=2.8, Ea=(1400, 'cal/mol'),
-                         T0=(1, 'K'), Tmin=(400, 'K'), Tmax=(1700, 'K')),
-    shortDesc = u"""[Goldsmith2019b]""",
-    longDesc =
-u"""
-same as KAUST2024 and CRECK mech. 
-""",
-)
 
