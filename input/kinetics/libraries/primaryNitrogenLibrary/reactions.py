@@ -68,9 +68,11 @@ Reference legend:
 [GlarGim] (RMG's Nitrogen_Glarborg_Gimenez_et_al library) Gimenez Lopeza et al., Proceedings of the Combustion Institute, 2009, 32(1), 367-375, doi: 10.1016/j.proci.2008.06.188
 [GlarZha] (RMG's Nitrogen_Glarborg_Zhang_et_al library) Kuiwen Zhang et al. Proceedings of the Combustion Institute, 2013, 34, 617-624, doi: 10.1016/j.proci.2012.06.010
 [Goldsmith2019] X. Chen, M.E. Fuller, C.F. Goldsmith, Reaction Chemistry and Engineering, 2019, 4, 323-333, doi: 10.1039/C8RE00201K
+[Goldsmith2019b] M.E. Fuller, C.F. Goldsmith / Proceedings of the Combustion Institute 37 (2019) 695–702
 [Green2014] K. Prozument, Y.V. Suleimanov, B. Buesser, J.M. Oldham, W.H. Green, A.G. Suits, R.W. Field, J. Phys. Chem. Lett. 2014, 5(21), 3641-3648, doi: 10.1021/jz501758p
 [GrinbergDana2019] A. Grinberg Dana, K.B. Moore, A.W. Jasper, W.H. Green, J. Phys. Chem. A, 2019, 123(22), 4679-4692, doi: 10.1021/acs.jpca.9b02217
 [GrinbergDana2024] A. Grinberg Dana, K. Kaplan, M. Keslin, C. Cao, W.H. Green, "NH3-1", submitted
+[GrinbergDana2025] Kaplan, Kfir, Michal Keslin, and Alon Grinberg Dana. Phys. Chem. Chem. Phys., 2025, 27, 14924–14935. https://doi.org/10.1039/D4CP01761G.
 [GRI] (RMG's GRI-Mech3.0-N library) GRI-Mech 3.0, http://www.me.berkeley.edu/gri_mech/
 [Hanson1981] T.R. Roose, R.K. Hanson, C.H. Kruger, Symposium (International) on Combustion, 1981, 18(1), 853-862, doi: 10.1016/S0082-0784(81)80089-6
 [Hanson1984a] M.Y. Louge, R.K. Hanson, Int. J. Chem. Kin., 1984, 16(3), 231-250, doi: 10.1002/kin.550160306
@@ -5692,11 +5694,16 @@ Recommended by Glarborg2022 (also by the NOx2018 library)
 entry(
     index=318,
     label='N + HO2 <=> O2 + NH',
-    kinetics=Arrhenius(A=(27.7894, 'cm^3/(mol*s)'), n=3.47248, Ea=(5.49367, 'kJ/mol'),
+    kinetics=Arrhenius(A=(1.82e-27, 'cm^3/(mol*s)'), n=9.81, Ea=(60.5, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]
+    (A=(27.7894, 'cm^3/(mol*s)'), n=3.47248, Ea=(5.49367, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x1
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pVTZ
     """,
@@ -5886,12 +5893,18 @@ entry(
 
 entry(
     index=332,
+    label='HO2 + NH2 <=> NH + H2O2',
+    kinetics=Arrhenius(A=(1.97e-5, 'cm^3/(mol*s)'), n=5.23, Ea=(34.2, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+    shortDesc=u"""[GrinbergDana2025]""",
+    longDesc=
+    u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]    
     label='NH + H2O2 <=> HO2 + NH2',
     kinetics=Arrhenius(A=(0.000171391, 'cm^3/(mol*s)'), n=4.92081, Ea=(14.0127, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
-    longDesc=
-    u"""
     x17
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pVTZ
     """,
@@ -5988,11 +6001,16 @@ entry(
 entry(
     index=339,
     label='NH3 + HO2 <=> H2O2 + NH2',
-    kinetics=Arrhenius(A=(0.132333, 'cm^3/(mol*s)'), n=4.13768, Ea=(77.0269, 'kJ/mol'),
+    kinetics=Arrhenius(A=(0.444, 'cm^3/(mol*s)'), n=4, Ea=(75.5, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]
+    (A=(0.132333, 'cm^3/(mol*s)'), n=4.13768, Ea=(77.0269, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x29
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pVTZ
     """,
@@ -6014,11 +6032,16 @@ entry(
 entry(
     index=341,
     label='N2H3 + HO2 <=> H2O2 + H2NN(T)',
-    kinetics=Arrhenius(A=(0.00201841, 'cm^3/(mol*s)'), n=4.04044, Ea=(12.2982, 'kJ/mol'),
+    kinetics=Arrhenius(A=(0.00279, 'cm^3/(mol*s)'), n=4.0, Ea=(7.9, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]
+    (A=(0.00201841, 'cm^3/(mol*s)'), n=4.04044, Ea=(12.2982, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x32
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pVTZ
     """,
@@ -6301,11 +6324,16 @@ entry(
 entry(
     index=363,
     label='HNO2 + HO2 <=> NO2 + H2O2',
-    kinetics=Arrhenius(A=(0.00213862, 'cm^3/(mol*s)'), n=4.53665, Ea=(0.871945, 'kJ/mol'),
+    kinetics=Arrhenius(A=(0.00249, 'cm^3/(mol*s)'), n=4.52, Ea=(0.2, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]    
+    (A=(0.00213862, 'cm^3/(mol*s)'), n=4.53665, Ea=(0.871945, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x68
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pVTZ
     """,
@@ -6392,11 +6420,16 @@ entry(
 entry(
     index=370,
     label='NNH + HO2 <=> N2H2 + O2',
-    kinetics=Arrhenius(A=(8.30235e-06, 'cm^3/(mol*s)'), n=4.80917, Ea=(5.18822, 'kJ/mol'),
+    kinetics=Arrhenius(A=(6.25e-05, 'cm^3/(mol*s)'), n=4.57, Ea=(2.2, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]
+    (A=(8.30235e-06, 'cm^3/(mol*s)'), n=4.80917, Ea=(5.18822, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x82
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pvtz
     """,
@@ -6405,11 +6438,16 @@ entry(
 entry(
     index=371,
     label='NH2O + HO2 <=> NH3O + O2',
-    kinetics=Arrhenius(A=(1.61201e-05, 'cm^3/(mol*s)'), n=4.51311, Ea=(8.62701, 'kJ/mol'),
+    kinetics=Arrhenius(A=(1.4e-05, 'cm^3/(mol*s)'), n=4.53, Ea=(8.1, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]
+    (A=(1.61201e-05, 'cm^3/(mol*s)'), n=4.51311, Ea=(8.62701, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x83
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pvtz
     """,
@@ -6430,12 +6468,18 @@ entry(
 
 entry(
     index=373,
-    label='NHOH + O2 <=> HNO + HO2',
-    kinetics=Arrhenius(A=(0.000376483, 'cm^3/(mol*s)'), n=4.61521, Ea=(75.8714, 'kJ/mol'),
+    label='HNO + HO2 <=> HNOH + O2',
+    kinetics=Arrhenius(A=(3.08, 'cm^3/(mol*s)'), n=2.98, Ea=(2.4, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]
+    label='NHOH + O2 <=> HNO + HO2',
+    kinetics=Arrhenius(A=(0.000376483, 'cm^3/(mol*s)'), n=4.61521, Ea=(75.8714, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x85
     CCSD(T)-F12/cc-pVTZ-F12//B2PLYPD3/Def2TZVP
     ** include, JIM MILLER ESTIMATED, USED BY S.J. Klippenstein et al. 
@@ -6445,11 +6489,16 @@ entry(
 entry(
     index=374,
     label='N2H2 + HO2 <=> NNH + H2O2',
-    kinetics=Arrhenius(A=(3.36973, 'cm^3/(mol*s)'), n=3.53454, Ea=(-1.79879, 'kJ/mol'),
+    kinetics=Arrhenius(A=(0.779, 'cm^3/(mol*s)'), n=3.96, Ea=(-0.6, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ
+    .
+    original [GrinbergDana2024]
+    (A=(3.36973, 'cm^3/(mol*s)'), n=3.53454, Ea=(-1.79879, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x88
     CBS-QB3
     """,
@@ -6669,11 +6718,16 @@ entry(
 entry(
     index=391,
     label='HNO + O2 <=> NO + HO2',
-    kinetics=Arrhenius(A=(1.90122e-05, 'cm^3/(mol*s)'), n=5.12075, Ea=(31.0018, 'kJ/mol'),
+    kinetics=Arrhenius(A=(1.19e-05, 'cm^3/(mol*s)'), n=5.06, Ea=(29.9, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-    shortDesc=u"""[GrinbergDana2024]""",
+    shortDesc=u"""[GrinbergDana2025]""",
     longDesc=
     u"""
+    CCSD(T)/aug-cc-pvtz//B2PLYPD3/aug-cc-pVTZ    
+    .
+    original ref [GrinbergDana2024]
+    Arrhenius(A=(1.90122e-05, 'cm^3/(mol*s)'), n=5.12075, Ea=(31.0018, 'kJ/mol'),
+                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
     x118
     CCSD(T)-F12/cc-pvtz-f12//B2PLYPD3/aug-cc-pvtz
     """,
@@ -7071,18 +7125,18 @@ entry(
     """,
 )
 
-entry(
-    index=417,
-    label="N2O + H <=> HNNO",
-    kinetics=Arrhenius(A=(8.5e+13, 'cm^3/(mol*s)'), n=0, Ea=(9082, 'cal/mol'), T0=(1, 'K')),
-    elementary_high_p=True,
-    shortDesc=u"""[DeanBozz2000]""",
-    longDesc=
-    u"""
-    Part of the "N2O Pathway"
-    See [DeanBozz2000] 2.6.3, p. 158, and Table 2.6 on p. 163
-    """,
-)
+# entry(
+#     index=417,
+#     label="N2O + H <=> HNNO",
+#     kinetics=Arrhenius(A=(8.5e+13, 'cm^3/(mol*s)'), n=0, Ea=(9082, 'cal/mol'), T0=(1, 'K')),
+#     elementary_high_p=True,
+#     shortDesc=u"""[DeanBozz2000]""",
+#     longDesc=
+#     u"""
+#     Part of the "N2O Pathway"
+#     See [DeanBozz2000] 2.6.3, p. 158, and Table 2.6 on p. 163
+#     """,
+# )
 
 entry(
     index=418,
@@ -7765,7 +7819,7 @@ entry(
         arrheniusHigh=Arrhenius(A=(1.70e+04, 'cm^3/(mol*s)'), n=3.05, Ea=(6530, 'cal/mol')),
         arrheniusLow=Arrhenius(A=(1.27e+27, 'cm^6/(mol^2*s)'), n=-3.48, Ea=(7030, 'cal/mol')),
         alpha=0.12, T3=(1e-30, 'K'), T1=(1e-30, 'K'), 
-        efficiencies={'[H][H]': 3.0, 'O': 21.0, '[O][O]': 1.1, 'N#N': 1.5},
+        efficiencies={'[H][H]': 3.0, 'O': 21.0, '[O][O]': 1.1, 'N#N': 1.5}),
     shortDesc = u"""[Burke2023]""",
     longDesc =
 u"""
@@ -7782,10 +7836,24 @@ entry(
         arrheniusHigh=Arrhenius(A=(2.37e-02, 'cm^3/(mol*s)'), n=4.81, Ea=(4790, 'cal/mol')),
         arrheniusLow=Arrhenius(A=(1.23e+25, 'cm^6/(mol^2*s)'), n=-2.94, Ea=(6770, 'cal/mol')),
         alpha=0.10, T3=(1e-30, 'K'), T1=(1e-30, 'K'), # T3 and T1 are defaults
-        efficiencies={'[H][H]': 3.0, 'O': 21.0, '[O][O]': 1.1, 'N#N': 1.5},
+        efficiencies={'[H][H]': 3.0, 'O': 21.0, '[O][O]': 1.1, 'N#N': 1.5}),
     shortDesc = u"""[Burke2023]""",
     longDesc =
 u"""
 cis HNNO
 """
 )
+
+entry(
+    index = 449,
+    label = "H + N2O <=> HNNO",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(1.9e+03, 'cm^3/(mol*s)'), n=2.8, Ea=(1400, 'cal/mol'),
+                         T0=(1, 'K'), Tmin=(400, 'K'), Tmax=(1700, 'K')),
+    shortDesc = u"""[Goldsmith2019b]""",
+    longDesc =
+u"""
+same as KAUST2024 and CRECK mech. 
+""",
+)
+
