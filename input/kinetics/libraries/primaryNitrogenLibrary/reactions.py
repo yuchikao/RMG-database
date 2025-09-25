@@ -6717,7 +6717,7 @@ entry(
 
 entry(
     index=391,
-    label='HNO + O2 <=> NO + HO2',
+    label='NO + HO2 <=> HNO + O2',
     kinetics=Arrhenius(A=(1.19e-05, 'cm^3/(mol*s)'), n=5.06, Ea=(29.9, 'kJ/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
     shortDesc=u"""[GrinbergDana2025]""",
