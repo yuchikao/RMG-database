@@ -172,6 +172,7 @@ Reference legend:
 [Xu2021] Y. Li, S. Javoy, R. Mevel, X. Xu, Phys. Chem. Chem. Phys., 2021, 23, 585, doi: 10.1039/d0cp05131d
 [Yamaguchi1999] Y. Yamaguchi, Y. Teng, S. Shimomura, K. Tabata, E. Suzuki, J. Phys. Chem. A, 1999, 103(41), 8272-8278, doi: 10.1021/jp990985a
 [Yang2012] Y. Guan, B. Yang, J. Comp. Chem., 2012, 33(23), 1870-1879, doi: 10.1002/jcc.23020
+[Zhu2025] Yuxiang Zhu, S.J. Klippenstein, Henry J. Curran, Chong-Wen Zhou, Combustion and Flame 277 (2025) 114232, doi: 10.1016/j.combustflame.2025.114232
 """
 
 entry(
@@ -7845,3 +7846,28 @@ cis HNNO
 )
 
 
+entry(
+    index = 449,
+    label = "CH3 + NH2 <=> CH2 + NH3",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.12604820E-01, 'cm^3/(mol*s)'),
+        n = 4.02052940E+00,
+        Ea = (7096.14145, 'cal/mol'),
+        T0 = (1, 'K'),
+    ),
+    shortDesc = u"""[Zhu2025]""",
+)
+
+entry(
+    index = 450,
+    label = "CH3 + NH2 <=> CH4 + NH",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.58798783E-01, 'cm^3/(mol*s)'),
+        n = 3.95217757E+00,
+        Ea = (2255.22189, 'cal/mol'),
+        T0 = (1, 'K'),
+    ),
+    shortDesc = u"""[Zhu2025]""",
+)
