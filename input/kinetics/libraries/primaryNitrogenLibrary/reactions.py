@@ -7895,7 +7895,7 @@ entry(
                     Arrhenius(A=(8.3828E34, 'cm^3/(mol*s)'), n=-6.60647, Ea=(8493.66911, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(8.8923E33, 'cm^3/(mol*s)'), n=-6.20157, Ea=(8571.97636, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(3.6695E32, 'cm^3/(mol*s)'), n=-5.69108, Ea=(8522.77846, 'cal/mol'), T0=(1, 'K')),
-                    Arrhenius(A=(2.7524E30, 'cm^3/(mol*s)'), n=-4.95599, Ea=(8355.86644, 'cal/mol'), T0=(1, 'K'))
+                    Arrhenius(A=(2.7524E30, 'cm^3/(mol*s)'), n=-4.95599, Ea=(8355.86644, 'cal/mol'), T0=(1, 'K')),
                 ]
             ),
             PDepArrhenius(
@@ -7923,7 +7923,7 @@ entry(
         Tmax = (2000, 'K'),
         Pmin = (0.01, 'bar'),
         Pmax = (500, 'bar'),
-        comment = "Example of MultiPDepArrhenius kinetics"
+        comment = "Example of MultiPDepArrhenius kinetics",
     ),
     shortDesc = u"""[Zhu2025]""",
     longDesc = u"""
@@ -7999,16 +7999,16 @@ entry(
             PDepArrhenius(
                 pressures = ([0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10.0, 20.0, 50.0, 100.0, 200.0, 500.0], 'bar'),
                 arrhenius = [
-                    Arrhenius(A=(6.9897E39, 'cm^3/(mol*s)'), n=-8.69806, Ea=(8195.22858, 'cal/mol'), T0=(1, 'K'))
+                    Arrhenius(A=(6.9897E39, 'cm^3/(mol*s)'), n=-8.69806, Ea=(8195.22858, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(6.8491E39, 'cm^3/(mol*s)'), n=-8.60112, Ea=(8421.96764, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(2.6901E39, 'cm^3/(mol*s)'), n=-8.36777, Ea=(8509.22308, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(1.162E39, 'cm^3/(mol*s)'), n=-8.17599, Ea=(8604.23429, 'cal/mol'), T0=(1, 'K')),
-                    Arrhenius(A=(4.4752E38, 'cm^3/(mol*s)'), n=-7.97121, Ea=(8726.61822, 'cal/mol'), T0=(1, 'K'))
+                    Arrhenius(A=(4.4752E38, 'cm^3/(mol*s)'), n=-7.97121, Ea=(8726.61822, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(8.7849E37, 'cm^3/(mol*s)'), n=-7.65646, Ea=(8883.35528, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(4.4286E36, 'cm^3/(mol*s)'), n=-7.21329, Ea=(8539.58288, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(4.1925E36, 'cm^3/(mol*s)'), n=-7.11615, Ea=(9146.03008, 'cal/mol'), T0=(1, 'K')),
-                    Arrhenius(A=(2.785E35, 'cm^3/(mol*s)'), n=-6.67898, Ea=(9230.8457, 'cal/mol'), T0=(1, 'K'))
-                    Arrhenius(A=(2.3786E34, 'cm^3/(mol*s)'), n=-6.30279, Ea=(9219.87154, 'cal/mol'), T0=(1, 'K'))
+                    Arrhenius(A=(2.785E35, 'cm^3/(mol*s)'), n=-6.67898, Ea=(9230.8457, 'cal/mol'), T0=(1, 'K')),
+                    Arrhenius(A=(2.3786E34, 'cm^3/(mol*s)'), n=-6.30279, Ea=(9219.87154, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(1.4002E33, 'cm^3/(mol*s)'), n=-5.88615, Ea=(9123.87312, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(1.987E31, 'cm^3/(mol*s)'), n=-5.2829, Ea=(8856.5563, 'cal/mol'), T0=(1, 'K')),
                     Arrhenius(A=(5.2068E29, 'cm^3/(mol*s)'), n=-4.78326, Ea=(8519.36634, 'cal/mol'), T0=(1, 'K')),
@@ -8325,7 +8325,7 @@ entry(
 
 entry(
     index = 461,
-    label = "NH2 + CH3<=> CH2NH + H2",
+    label = "NH2 + CH3 <=> CH2NH + H2",
     degeneracy = 1,
     kinetics = MultiPDepArrhenius(
         arrhenius = [
