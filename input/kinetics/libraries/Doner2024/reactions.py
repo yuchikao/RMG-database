@@ -76,8 +76,8 @@ entry(
     label='O + HNO <=> OH + NO1',
     kinetics = MultiArrhenius(
         arrhenius=[
-            Arrhenius(A=(9.63E16, 'cm^3/(mol*s)'), n=-1.49, Ea=(0.19, 'kJ/mol'),T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(1.5E10, 'cm^3/(mol*s)'), n=1.04, Ea=(0.0, 'kJ/mol'),T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
+            Arrhenius(A=(7.24E15, 'cm^3/(mol*s)'), n=-1.04, Ea=(0.0644, 'kJ/mol'),T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.84E12, 'cm^3/(mol*s)'), n=0.322, Ea=(4.68, 'kJ/mol'),T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K'))
             ],
     )
 )
